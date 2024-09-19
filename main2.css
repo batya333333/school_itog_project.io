@@ -473,7 +473,7 @@ article {
 .container_cards{
   margin-top: 10vh;
   background-image: url('img/4861242.jpg');
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
   /* background-size: cover; */
 }
 
@@ -598,7 +598,7 @@ article {
   max-width: 1200px;
   margin-inline: auto;
   padding-inline: 24px;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(357px, 3fr));
   gap: 24px;
   margin-top: 3vw;
 }
@@ -638,13 +638,15 @@ hr{
 }
 
 .news_wrapper{
-  width: 380px;
+  width: 360px;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: .3s;
   background: #fff;
   border-bottom: solid 1px grey;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
   
 }
 
@@ -676,14 +678,16 @@ hr{
   transition: .3s
 }
 .news_img img{
-  width: 380px;
+  width: 360px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
 .news{
   gap:24px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(327px, 3fr));
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fill, minmax(357px, 4fr));
+  max-width: 1600px;
   margin-inline: auto;
   justify-items: center;
   
@@ -911,6 +915,12 @@ hr{
   .news_inner{
     padding: 0;
   }
+  .container_cards h1{
+    border-radius: 0px;
+  }
+  .marshrut_torist{
+    border-radius: 0px;
+  }
 }
 
 
@@ -935,6 +945,7 @@ hr{
   }
   .taganrog-tourist{
     width: auto ;
+    border-radius: 0px;
   }
   .container_cards h1{
     width: auto;
@@ -968,7 +979,8 @@ hr{
     border-radius: 0px;
   }
   .taganrog-tourist{
-    width: 900px;
+    width: auto;
+    border-radius: 0px;
   }
   .container_cards{
     margin-top:5vh;
@@ -985,12 +997,6 @@ hr{
   }
 }
 
-@media(max-width:900px){
-  .taganrog-tourist{
-    width: auto;
-    border-radius: 0px;
-  }
-}
 
 @media(max-width:820px){
   .main_logo img{
@@ -1004,7 +1010,7 @@ hr{
   }
   .container_cards h1{
     font-size: 28px;
-    width: 700px;
+    /* width: 700px; */
   }
   .list_hours{
     text-align: center;
@@ -1019,19 +1025,20 @@ hr{
     border-radius: 0px;
   }
   .wrapper_about_city img{
-    width: 500px;
+    width: 388px;
   }
 
   .news_inner{
     padding: 0  ;
   }
 
-  .wrapper_about_city img{
-    width: 620px;
-  }
+  /* .wrapper_about_city img{ */
+    /* width: 620px; */
+  /* } */
 
   .marshrut_torist{
-    width: auto;
+    width: 500px;
+    border-radius: 20px;
   }
   .taganrog-tourist{
     width: auto ;
@@ -1059,22 +1066,21 @@ hr{
     text-align: center;
     flex-direction: column;
   }
-  .marshrut_torist{
-    width:auto;
-    border-radius: 0px;
-  }
   .taganrog-tourist{
     width: auto;
     border-radius: 0px;
   }
   .wrapper_about_city img{
-    width: 500px;
+    width: 380px;
   }
   .news_wrapper{
     width: 350px;
   }
   .news_wrapper img{
     width: 350px;
+  }
+  .about_city_body{
+    grid-template-columns: repeat(auto-fill, minmax(320px, 3fr));
   }
 
 }
@@ -1083,6 +1089,7 @@ hr{
   .container_cards h1{
     width: auto;
     font-size: 25px;
+    border-radius: 0px;
   }
 }
 
@@ -1112,8 +1119,12 @@ hr{
   .main_about{
     width: 500px;
   }
-  .wrapper_about_city img{
-    width: 450px;
+}
+
+@media(max-width:500px){
+  .marshrut_torist{
+    width: auto;
+    border-radius: 0px;
   }
 }
 
@@ -1167,7 +1178,7 @@ hr{
   .container_cards h1{
     font-size: 23px;
     padding:25px;
-    width:375px;
+    /* width:375px; */
     border-radius: 0px;
   }
   .list_hours{
