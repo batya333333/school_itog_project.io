@@ -1002,6 +1002,23 @@ hr{
   }
 }
 
+@media(max-width:998px){
+  .main_logo img{
+    width: 450px;
+  }
+  .main_about{
+    width: 450px;
+  }
+}
+
+@media(max-width:902px){
+  .main_logo img{
+    width: 400px;
+  }
+  .main_about{
+    width: 400px;
+  }
+}
 
 @media(max-width:820px){
   .main_logo img{
