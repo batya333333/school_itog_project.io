@@ -1235,3 +1235,17 @@ hr{
     width:361px;
   }
 }
+
+
+
+.ff1 a{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: coral;
+  transition: .3s;
+  font-size: 25px;
+}
+.ff1 a:hover{
+  color:white;
+}
