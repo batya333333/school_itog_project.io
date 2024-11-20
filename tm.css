@@ -83,14 +83,14 @@ body{
   display: flex;
   justify-content: center;
   gap: 16px;
-  margin-top: 3vh;
+  margin-top: 2vh;
 
 }
 
 .yousee{
   margin: auto;
   text-align: center;
-  margin-top: 3vh;
+  margin-top: 1vh;
 }
 
 .sp a{
@@ -286,7 +286,7 @@ body{
     color:coral;
 }
 .wrap a{
-    text-decoration: none;
+    /* text-decoration: none; */
     color: coral;
 }
 
@@ -651,6 +651,77 @@ body{
     }
     .wrap img{
         width: 400px;
+    }
+    .section1_text h2{
+        text-align: center;
+
+    }
+    .section2_text h2{
+        text-align: center;
+
+    }
+    .section3_text h2{
+        text-align: center;
+
+    }
+    .section4_text h2{
+        text-align: center;
+
+    }
+    .section5_text h2{
+        text-align: center;
+
+    }
+    .section6_text h2{
+        text-align: center;
+
+    }
+    .section7_text h2{
+        text-align: center;
+
+    }
+    .section8_text h2{
+        text-align: center;
+
+    }
+    .section9_text h2{
+        text-align: center;
+
+    }
+    .section10_text h2{
+        text-align: center;
+
+    }
+
+    .section1_text{
+        width: 95vw;
+    }
+    .section2_text{
+        width: 95vw;
+    }
+    .section3_text{
+        width: 95vw;
+    }
+    .section4_text{
+        width: 95vw;
+    }
+    .section5_text{
+        width: 95vw;
+    }
+    .section6_text{
+        width: 95vw;
+    }
+    .section7_text{
+        width: 95vw;
+    }
+    .section8_text{
+        width: 95vw;
+    }
+    .section9_text{
+        width: 95vw;
+    }
+    .section10_text{
+        width: 95vw;
     }
 }
 

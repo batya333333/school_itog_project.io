@@ -613,7 +613,7 @@ article {
   margin: 0 auto;
   margin-top: 5vw;
   background: -webkit-linear-gradient(360deg, #98c1ff,#fdd3d3,#bbb5f5);
-  padding: 50px 50px 50px 50px;
+  padding: 20px; 
   border-radius: 20px;
 }
 
