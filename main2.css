@@ -1249,3 +1249,25 @@ hr{
 .ff1 a:hover{
   color:white;
 }
+
+/* @media(max-width:1024px){
+  .articles{
+    gap:4px;
+  }
+}
+
+@media(max-width:980px){
+  .articles{
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+  }
+} */
+
+/* @media(max-width:950px){
+  .about_city_body{
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+  }
+} */
