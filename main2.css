@@ -684,8 +684,11 @@ hr{
 }
 
 .news{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap:24px;
-  display: grid;
+  /* display: grid; */
   grid-template-columns: repeat(auto-fill, minmax(357px, 4fr));
   max-width: 1600px;
   margin-inline: auto;
@@ -879,6 +882,21 @@ hr{
     width: 550px;
   }
   .main_about{
+    width: 500px;
+  }
+}
+@media(max-width:1295px){
+  .about_city_body{
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .wrapper_about_city{
+    /* width: 600px; */
+    margin: 0 auto;
+  }
+  .wrapper_about_city img{
     width: 500px;
   }
 }
@@ -1113,6 +1131,15 @@ hr{
     font-size: 25px;
     border-radius: 0px;
   }
+  .main_logo img{
+    width: 650px;
+  }
+  .main_about1{
+    width: auto;
+  }
+  .main_about{
+    width: 650px;
+  }
 }
 
 @media(max-width:650px){
@@ -1133,6 +1160,17 @@ hr{
   }
 }
 
+@media(max-width:600px){
+  .main_logo img{
+    width: 500px;
+  }
+  .main_about1{
+    width: auto;
+  }
+  .main_about{
+    width: 500px;
+  }
+}
 
 @media(max-width:550px){
   .main_logo img{
@@ -1147,6 +1185,15 @@ hr{
   .marshrut_torist{
     width: auto;
     border-radius: 0px;
+  }
+  .main_logo img{
+    width: 450px;
+  }
+  .main_about1{
+    width: auto;
+  }
+  .main_about{
+    width: 450px;
   }
 }
 
@@ -1271,3 +1318,4 @@ hr{
     flex-direction: column;
   }
 } */
+
