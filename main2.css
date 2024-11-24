@@ -885,7 +885,7 @@ hr{
     width: 500px;
   }
 }
-@media(max-width:1295px){
+@media(max-width:1301px){
   .about_city_body{
     justify-content: space-evenly;
     display: flex;
