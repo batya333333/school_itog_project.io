@@ -30,8 +30,16 @@ body { font-family: 'Montserrat', sans-serif!important;
         margin: 0 auto;
     }
 }
+.col-md-7 order-md-2 h2{
+    color:coral;
+}
 
-
+.col-md-7 h2{
+    color:coral
+}
+.ab{
+    color:coral;
+}
 
 
 
