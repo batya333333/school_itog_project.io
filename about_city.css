@@ -1,0 +1,85 @@
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+         
+    }
+
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif!important;
+}
+.wrap{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.part{
+    text-decoration: none;
+    color: black;
+    border-radius: 16px;
+    border: solid 1px silver;
+    padding: 9px;
+    color: coral;
+}
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.osnov p{
+    font-size: 17px;
+    margin: 0 0 30px;
+    line-height: 1.7;
+    word-wrap: break-word;
+}
+
+.history p{
+    font-size: 17px;
+    margin: 0 0 30px;
+    line-height: 1.7;
+    word-wrap: break-word;
+}
+
+.culture p{
+    font-size: 17px;
+    margin: 0 0 30px;
+    line-height: 1.7;
+    word-wrap: break-word;
+}
+
+.architect p{
+    font-size: 17px;
+    margin: 0 0 30px;
+    line-height: 1.7;
+    word-wrap: break-word;
+}
+
+.cl p{
+    font-size: 17px;
+    margin: 0 0 30px;
+    line-height: 1.7;
+    word-wrap: break-word;
+}
+
+.tr p{
+    font-size: 17px;
+    margin: 0 0 30px;
+    line-height: 1.7;
+    word-wrap: break-word;
+}
+
+.fest p{
+    font-size: 17px;
+    margin: 0 0 30px;
+    line-height: 1.7;
+    word-wrap: break-word;  
+}
+
+.cith p{
+    font-size: 17px;
+    margin: 0 0 30px;
+    line-height: 1.7;
+    word-wrap: break-word;  
+}
