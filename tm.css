@@ -667,6 +667,15 @@ body{
     .section10_img img{
         height: auto;
     }
+    .carta{
+        width: 550px;
+    }
+}
+
+@media(max-width:551px){
+    .carta{
+        width: 450px;
+    }
 }
 
 @media(max-width:500px){
@@ -749,6 +758,12 @@ body{
     }
     .section10._text{
         width: 95vw;
+    }
+}
+
+@media(max-width:451px){
+    .carta{
+        width: 400px;
     }
 }
 
