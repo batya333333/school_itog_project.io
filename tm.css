@@ -182,7 +182,7 @@ body{
 .section33_img img{
     width: 763px;
     border-radius: 25px;
-    height: 547px;
+    height: 500px;
 }
 
 .section_4{
@@ -199,7 +199,7 @@ body{
 .section44_img img{
     width: 763px;
     border-radius: 25px;
-    height: 547px;
+    height: 500px;
 }
 
 .section_5{
@@ -216,7 +216,7 @@ body{
 .section55_img img{
     width: 763px;
     border-radius: 25px;
-    height: 547px;
+    height: 500px;
 }
 
 .section_6{
@@ -233,7 +233,7 @@ body{
 .section66_img img{
     width: 763px;
     border-radius: 25px;
-    height: 547px;
+    height: 500px;
 }
 
 .section_7{
@@ -250,7 +250,7 @@ body{
 .section77_img img{
     width: 763px;
     border-radius: 25px;
-    height: 547px;
+    height: 500px;
 }
 
 .section_8{
@@ -267,7 +267,7 @@ body{
 .section88_img img{
     width: 763px;
     border-radius: 25px;
-    height: 547px;
+    height: 500px;
 }
 
 .section_9{
@@ -284,7 +284,7 @@ body{
 .section99_img img{
     width: 763px;
     border-radius: 25px;
-    height: 547px;
+    height: 500px;
 }
 
 .section_10{
@@ -301,7 +301,7 @@ body{
 .section10_img img{
     width: 763px;
     border-radius: 25px;
-    height: 547px;
+    height: 400px;
 }
 
 .wrap h2{
@@ -358,6 +358,9 @@ body{
     .wrap img{
         width: 600px;
     }
+    .bd-placeholder-img{
+        height: 560px;
+    }
 }
 
 @media(max-width:1300px){
@@ -367,6 +370,27 @@ body{
     .wrap{
         width: 1100px;
     }
+    .section33_img img{
+        height: 437px;
+    }
+    .section44_img img{
+        height: 437px;
+    }
+    .section55_img img{
+        height: 437px;
+    }
+    .section66_img img{
+        height: 437px;
+    }
+    .section77_img img{
+        height: 437px;
+    }
+    .section88_img img{
+        height: 437px;
+    }
+    .section99_img img{
+        height: 437px;
+    }
 }
 
 @media(max-width:1100px){
@@ -375,7 +399,7 @@ body{
     }
 
     .bd-placeholder-img{
-        height: 600px;
+        height: 560px;
     }
     .wrap img{
         width: 720px;
@@ -471,6 +495,27 @@ body{
         flex-direction: column;
         align-items: center;
     }
+    .section33_img img{
+        height: 500px;
+    }
+    .section44_img img{
+        height: 500px;
+    }
+    .section55_img img{
+        height: 500px;
+    }
+    .section66_img img{
+        height: 500px;
+    }
+    .section77_img img{
+        height: 500px;
+    }
+    .section88_img img{
+        height: 500px;
+    }
+    .section99_img img{
+        height: 500px;
+    }
 }
 
 @media(max-width:900px){
@@ -540,7 +585,33 @@ body{
     .sp{
         padding:40px;
     }
+    .section33_img img{
+        height: auto;
+    }
+    .section44_img img{
+        height: auto;
+    }
+    .section55_img img{
+        height: auto;
+    }
+    .section66_img img{
+        height: auto;
+    }
+    .section77_img img{
+        height: auto;
+    }
+    .section88_img img{
+        height: auto;
+    }
+    .section99_img img{
+        height: auto;
+    }
+    .bd-placeholder-img{
+        height: 370px;
+    }
 }
+
+
 
 @media(max-width:700px){
     .sp{
@@ -644,7 +715,7 @@ body{
     }
 
     .section33_img img{
-        height: auto;
+        height: 330px;
     }
     .section44_img img{
         height: auto;
@@ -670,11 +741,17 @@ body{
     .carta{
         width: 550px;
     }
+    .bd-placeholder-img{
+        height: 300px;
+    }
 }
 
 @media(max-width:551px){
     .carta{
         width: 450px;
+    }
+    .section33_img img{
+        height: 310px;
     }
 }
 
