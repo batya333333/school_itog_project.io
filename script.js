@@ -46,3 +46,186 @@ document.addEventListener('DOMContentLoaded', function () {
         scrollTo(0, 400);
     }
 });
+
+
+// translator.js
+class UniversalTranslator {
+    constructor() {
+        this.isEnglish = localStorage.getItem('globalTranslationState') === 'true';
+        this.originalContents = new Map();
+        this.translationCache = new Map();
+        this.init();
+    }
+
+    init() {
+        this.loadCache();
+        
+        // Если мы на index.html - обновляем кнопку
+        if (window.location.pathname.includes('index.html') || window.location.pathname.endsWith('/')) {
+            this.updateTranslateLink();
+        }
+        
+        // Если перевод включен - переводим текущую страницу
+        if (this.isEnglish) {
+            setTimeout(() => {
+                this.translateToEnglish();
+            }, 500);
+        }
+    }
+
+    updateTranslateLink() {
+        const link = document.getElementById('translate-link');
+        if (link) {
+            link.textContent = this.isEnglish ? 'RU' : 'ENG';
+        }
+    }
+
+    async toggleTranslation(event) {
+        if (event) event.preventDefault();
+        
+        if (this.isEnglish) {
+            this.resetToRussian();
+        } else {
+            await this.translateToEnglish();
+        }
+        
+        this.isEnglish = !this.isEnglish;
+        localStorage.setItem('globalTranslationState', this.isEnglish);
+        
+        // Обновляем кнопку только если мы на index.html
+        if (window.location.pathname.includes('index.html') || window.location.pathname.endsWith('/')) {
+            this.updateTranslateLink();
+        }
+    }
+
+    async translateToEnglish() {
+        const elementsToTranslate = this.getTranslatableSelectors();
+        
+        for (const selector of elementsToTranslate) {
+            const elements = document.querySelectorAll(selector);
+            for (const element of elements) {
+                await this.safeTranslateElement(element);
+                await new Promise(resolve => setTimeout(resolve, 30));
+            }
+        }
+        
+        this.saveCache();
+    }
+
+    getTranslatableSelectors() {
+        return [
+            '.menu-items a',
+            '.main_about h1',
+            '.main_about p',
+            '.main_about h4 a',
+            '.container_cards h1',
+            '.article-body h2',
+            '.article-body p',
+            '.article-body a',
+            '.marshrut_torist h1',
+            '.marshrut_torist a',
+            '.about_city h1',
+            '.about_body h2',
+            '.about_body p',
+            '.content h1',
+            '.info a',
+            '.part',
+            '.osnov h1',
+            '.osnov p',
+            '.history h1',
+            '.history p', 
+            '.culture h1',
+            '.culture p',
+            '.architect h1',
+            '.architect p',
+            '.cl h1',
+            '.cl p',
+            '.tr h1',
+            '.tr p',
+            '.fest h1',
+            '.fest p',
+            '.cith h1',
+            '.cith p'
+        ];
+    }
+
+    async safeTranslateElement(element) {
+        const originalText = element.textContent.trim();
+        if (!originalText || originalText.length < 2) return;
+
+        try {
+            if (!this.originalContents.has(element)) {
+                this.originalContents.set(element, {
+                    text: originalText,
+                    html: element.innerHTML,
+                    href: element.getAttribute('href')
+                });
+            }
+
+            const cacheKey = this.generateHash(originalText);
+            let translatedText;
+
+            if (this.translationCache.has(cacheKey)) {
+                translatedText = this.translationCache.get(cacheKey);
+            } else {
+                translatedText = await this.googleTranslate(originalText);
+                this.translationCache.set(cacheKey, translatedText);
+            }
+
+            const originalHref = element.getAttribute('href');
+            element.textContent = translatedText;
+            if (originalHref) {
+                element.setAttribute('href', originalHref);
+            }
+
+        } catch (error) {
+            console.error('Translation error:', error);
+        }
+    }
+
+    resetToRussian() {
+        this.originalContents.forEach((original, element) => {
+            if (element.isConnected) {
+                element.innerHTML = original.html;
+            }
+        });
+    }
+
+    generateHash(text) {
+        let hash = 0;
+        for (let i = 0; i < text.length; i++) {
+            const char = text.charCodeAt(i);
+            hash = ((hash << 5) - hash) + char;
+            hash = hash & hash;
+        }
+        return 't_' + Math.abs(hash).toString(36);
+    }
+
+    async googleTranslate(text) {
+        const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=ru&tl=en&dt=t&q=${encodeURIComponent(text)}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        return data[0].map(item => item[0]).join('');
+    }
+
+    saveCache() {
+        const cacheObj = Object.fromEntries(this.translationCache);
+        localStorage.setItem('translationCache', JSON.stringify(cacheObj));
+    }
+
+    loadCache() {
+        const cached = localStorage.getItem('translationCache');
+        if (cached) {
+            const cacheObj = JSON.parse(cached);
+            this.translationCache = new Map(Object.entries(cacheObj));
+        }
+    }
+}
+
+// Создаем глобальный экземпляр
+const translator = new UniversalTranslator();
+
+// Глобальная функция для HTML
+function toggleTranslation(event) {
+    translator.toggleTranslation(event);
+}
